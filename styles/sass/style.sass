@@ -1,0 +1,101 @@
+@import 'sass-toolbox'
+
+*
+  +box-sizing(border-box)
+
+body
+  color: $text_normal
+  font-family: Helvetica, Arial, sans-serif
+  font-size: $fs_normal + 0px
+  line-height: 1.4
+
+
+// Typography
+// ================================================
+a
+  color: $blue
+  text-decoration: none
+
+  &:hover
+    text-decoration: underline
+
+h2
+  font-size: em($fs_heading)
+
+p, ol, ul, table, pre
+  margin: 0 0 30px
+
+code
+  background: $bg_grey
+  padding: 4px
+  font-size: em($fs_normal - 2)
+
+pre
+  padding: 10px
+  background: $bg_grey
+
+  code
+    font-size: em($fs_normal)
+    padding: 0
+    margin: 0
+    background: none
+
+
+// Help search
+// ================================================
+.help-search-form
+  margin-bottom: $gutter
+
+.help-search-field
+  display: block
+  width: 100%
+  border: 1px solid $border_light_grey
+  border-radius: 3px
+  padding: 10px
+  font-size: em($fs_heading)
+
+
+// Breadcrumbs
+// ================================================
+.help-breadcrumbs
+  margin: 15px 0 $gutter
+
+// Help table of contents
+// ================================================
+.help-toc, .help-item-page
+  background: #fff
+  margin: 100px auto
+  max-width: 700px
+  width: 95%
+
+.help-section
+  margin-bottom: $gutter
+
+  &:last-child
+    margin-bottom: 0
+
+.help-section-title
+  margin-bottom: 5px
+  font-size: em($fs_normal)
+  text-transform: uppercase
+
+.help-topics
+  margin: 0
+  padding: 0
+  list-style: none
+
+.help-topic
+  margin: 0
+  padding: 10px 0
+  border-bottom: 1px solid $border_light_grey
+
+  &:last-child
+    border-bottom: 0 none
+
+.help-topic-link
+  display: block
+
+
+// Help item permalink page
+// ================================================
+

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <title>{{site.title}} | {{title}}</title>
+  <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
+  <link rel="stylesheet" type="text/css" href="/styles/css/style.css" />
+  <link rel="stylesheet" type="text/css" href="/styles/css/tomorrow.css" />
+</head>
+<body>
+  <div class="help-toc">
+    <form class="help-search-form">
+      <input type="text" placeholder="Search topics..." class="help-search-field" />
+    </form>
+    
+    <h1 class="help-item-title">{{ title }}</h1>
+  
+    {% comment %}{% if parent %}
+      <div class="help-breadcrumbs">
+        {% assign a = parent %}
+        {% include 'help_breadcrumb' %}
+        {{ title }}
+      </div>
+    {% endif %}{% endcomment %}
+
+    {% for section in pages %}
+      {% if section.pages %}
+        <div class="help-section">
+          
+          <h2 class="help-section-title" id="help-{{ section.slug }}">
+            <a href="{{ section.url }}">{{ section.title }}</a>
+          </h2>
+
+          <ul class="help-topics">
+            {% for topic in section.pages  %}
+              <li class="help-topic">
+                <a href="{{ topic.url }}" class="help-topic-link">{{ topic.title }}</a>
+              </li>
+            {% endfor %}
+          </ul>
+
+        </div>
+      {% endif %}
+    {% endfor %}
+    
+    {{ body }}
+  </div>
+</body>
+</html>

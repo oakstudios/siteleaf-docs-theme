@@ -1,0 +1,83 @@
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  color: #41484a;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.4; }
+
+a {
+  color: #0091e5;
+  text-decoration: none; }
+  a:hover {
+    text-decoration: underline; }
+
+h2 {
+  font-size: 1.5em; }
+
+p, ol, ul, table, pre {
+  margin: 0 0 30px; }
+
+code {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 4px;
+  font-size: 0.875em; }
+
+pre {
+  padding: 10px;
+  background: rgba(0, 0, 0, 0.05); }
+  pre code {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    background: none; }
+
+.help-search-form {
+  margin-bottom: 50px; }
+
+.help-search-field {
+  display: block;
+  width: 100%;
+  border: 1px solid #eeeeee;
+  border-radius: 3px;
+  padding: 10px;
+  font-size: 1.5em; }
+
+.help-breadcrumbs {
+  margin: 15px 0 50px; }
+
+.help-toc, .help-item-page {
+  background: white;
+  margin: 100px auto;
+  max-width: 700px;
+  width: 95%; }
+
+.help-section {
+  margin-bottom: 50px; }
+  .help-section:last-child {
+    margin-bottom: 0; }
+
+.help-section-title {
+  margin-bottom: 5px;
+  font-size: 1em;
+  text-transform: uppercase; }
+
+.help-topics {
+  margin: 0;
+  padding: 0;
+  list-style: none; }
+
+.help-topic {
+  margin: 0;
+  padding: 10px 0;
+  border-bottom: 1px solid #eeeeee; }
+  .help-topic:last-child {
+    border-bottom: 0 none; }
+
+.help-topic-link {
+  display: block; }

@@ -1,0 +1,9 @@
+# javascripts:
+#   application:
+#     - scripts/js/plugins/responsive-carousel.js
+#     - scripts/js/plugins/responsive-carousel.touch.js
+#     - scripts/js/plugins/responsive-carousel.drag.js
+#     - scripts/js/plugins/responsive-carousel.autoinit.js
+#     - scripts/js/plugins/responsive-carousel.keybd.js
+#     - scripts/js/plugins/jquery.fancybox.pack.js
+#     - scripts/js/home.js
