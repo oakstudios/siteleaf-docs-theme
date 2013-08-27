@@ -9,12 +9,20 @@
   {% comment %}<link rel="stylesheet" type="text/css" href="/styles/css/github.css" />{% endcomment %}
 </head>
 <body>
-  <div class="help-toc">
+    
+
+  <div class="wrap">
+    <ul class="header-nav">
+      {% for page in site.pages %}
+        <li class="header-nav-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
+      {% endfor %}
+    </ul>
+
     <form class="help-search-form">
       <input type="text" placeholder="Search topics..." class="help-search-field" />
     </form>
     
-    <h1 class="help-item-title">{{ title }}</h1>
+    <h1 class="page-title">{{ title }}</h1>
     
     {% if parent %}
       {% include 'includes/help-breadcrumbs' %}
@@ -22,7 +30,10 @@
 
     {% include 'includes/help-toc' %}
     
-    {{ body }}
+    <div class="body">
+      {{ body }}
+    </div>
+    
   </div>
 
   <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>

@@ -42,7 +42,6 @@ pre
     background: none
 
 table
-  line-height: 1.5
   margin-bottom: 30px
 
 th, td
@@ -59,6 +58,30 @@ tr:last-child
   th, td
     border-bottom: 0 none
 
+.body
+  line-height: 1.5
+
+
+// Header nav
+// ================================================
+.header-nav
+  list-style: none
+  margin: 0 0 ($gutter / 2)
+  padding: 0
+
+.header-nav-item
+  display: inline-block
+  text-transform: uppercase
+  font-size: em($fs_small)
+
+  a
+    color: $text_light
+    padding: 10px
+    border-radius: 2px
+
+  &:first-child
+    a
+      padding-left: 0
 
 // Help search
 // ================================================
@@ -86,8 +109,7 @@ tr:last-child
 
 // Help table of contents
 // ================================================
-.help-toc, .help-item-page
-  background: #fff
+.wrap
   margin: 100px auto
   max-width: 700px
   width: 95%
@@ -104,7 +126,7 @@ tr:last-child
   text-transform: uppercase
 
 .help-topics, .help-subtopics
-  margin: 0
+  margin: 0 0 $gutter
   padding: 0
   list-style: none
 
