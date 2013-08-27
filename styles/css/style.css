@@ -18,6 +18,9 @@ a {
   a:hover {
     text-decoration: underline; }
 
+.page-title {
+  margin-bottom: 25px; }
+
 h2 {
   font-size: 1.5em; }
 
@@ -72,6 +75,14 @@ tr:last-child th, tr:last-child td {
   .header-nav-item:first-child a {
     padding-left: 0; }
 
+.wrap {
+  margin: 100px auto;
+  max-width: 700px;
+  width: 95%; }
+  @media only screen and (max-width: 600px) {
+    .wrap {
+      margin: 50px auto; } }
+
 .help-search-form {
   margin-bottom: 50px; }
 
@@ -90,25 +101,12 @@ tr:last-child th, tr:last-child td {
 .help-current-breadcrumb {
   color: #999d9e; }
 
-.wrap {
-  margin: 100px auto;
-  max-width: 700px;
-  width: 95%; }
-
-.help-section {
-  margin-bottom: 50px; }
-  .help-section:last-child {
-    margin-bottom: 0; }
-
-.help-section-title {
-  margin-bottom: 5px;
-  font-size: 1em;
-  text-transform: uppercase; }
-
 .help-topics, .help-subtopics {
-  margin: 0 0 50px;
   padding: 0;
   list-style: none; }
+
+.help-topics {
+  margin: 0 0 25px; }
 
 .help-topic {
   margin: 0;
@@ -118,7 +116,7 @@ tr:last-child th, tr:last-child td {
     border-bottom: 0 none; }
 
 .help-subtopics {
-  margin-top: 5px; }
+  margin: 5px 0 0; }
 
 .help-subtopic {
   font-size: 0.875em;
@@ -127,3 +125,9 @@ tr:last-child th, tr:last-child td {
     content: "-";
     margin-right: 5px;
     color: #999d9e; }
+
+.help-post-date {
+  color: #999d9e;
+  font-size: 0.875em;
+  display: inline-block;
+  width: 120px; }

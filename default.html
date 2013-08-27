@@ -33,7 +33,11 @@
     <div class="body">
       {{ body }}
     </div>
-    
+
+    {% if posts.size > 0 %}
+      {% include 'includes/help-posts' %}
+    {% endif %}
+
   </div>
 
   <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
