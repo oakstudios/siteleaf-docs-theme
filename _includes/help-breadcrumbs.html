@@ -1,0 +1,25 @@
+{% comment %}
+  Breadcrumbs
+  ------------------------
+  Lists the parents of the current page.
+{% endcomment %}
+
+<div class="help-breadcrumbs">
+  {% assign slugs = url | split:'/' %}
+  {% for slug in slugs %}
+    {% if slug == '' %}
+      {% assign up = site %}
+    {% else %}
+
+      {% assign page = up.pages[slug] %}
+
+        {% if page.url == current.url %}
+          <span class="help-current-breadcrumb">{{ page.title }}</span>
+        {% else %}
+          <a href="{{ page.url }}">{{ page.title }}</a> &raquo;
+        {% endif %}
+
+      {% assign up = page %}
+    {% endif %}
+  {% endfor %}
+</div>

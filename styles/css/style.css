@@ -1,3 +1,4 @@
+@import url(github.css);
 * {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -30,12 +31,28 @@ code {
 
 pre {
   padding: 10px;
-  background: rgba(0, 0, 0, 0.05); }
+  background: rgba(0, 0, 0, 0.05);
+  overflow: scroll; }
   pre code {
-    font-size: 1em;
     padding: 0;
     margin: 0;
     background: none; }
+
+table {
+  line-height: 1.5;
+  margin-bottom: 30px; }
+
+th, td {
+  padding: 10px 15px 10px 0;
+  margin: 0;
+  text-align: left;
+  font-size: 0.875em;
+  border-bottom: 1px solid #eeeeee; }
+  th:last-child, td:last-child {
+    padding-right: 0; }
+
+tr:last-child th, tr:last-child td {
+  border-bottom: 0 none; }
 
 .help-search-form {
   margin-bottom: 50px; }
@@ -49,7 +66,11 @@ pre {
   font-size: 1.5em; }
 
 .help-breadcrumbs {
-  margin: 15px 0 50px; }
+  margin: 15px 0 50px;
+  font-size: 0.875em; }
+
+.help-current-breadcrumb {
+  color: #999d9e; }
 
 .help-toc, .help-item-page {
   background: white;
@@ -67,7 +88,7 @@ pre {
   font-size: 1em;
   text-transform: uppercase; }
 
-.help-topics {
+.help-topics, .help-subtopics {
   margin: 0;
   padding: 0;
   list-style: none; }
@@ -79,5 +100,13 @@ pre {
   .help-topic:last-child {
     border-bottom: 0 none; }
 
-.help-topic-link {
-  display: block; }
+.help-subtopics {
+  margin-top: 5px; }
+
+.help-subtopic {
+  font-size: 0.875em;
+  margin: 2px 0; }
+  .help-subtopic:before {
+    content: "-";
+    margin-right: 5px;
+    color: #999d9e; }

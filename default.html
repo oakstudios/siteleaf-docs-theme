@@ -6,7 +6,7 @@
   <title>{{site.title}} | {{title}}</title>
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link rel="stylesheet" type="text/css" href="/styles/css/style.css" />
-  <link rel="stylesheet" type="text/css" href="/styles/css/tomorrow.css" />
+  {% comment %}<link rel="stylesheet" type="text/css" href="/styles/css/github.css" />{% endcomment %}
 </head>
 <body>
   <div class="help-toc">
@@ -15,36 +15,17 @@
     </form>
     
     <h1 class="help-item-title">{{ title }}</h1>
-  
-    {% comment %}{% if parent %}
-      <div class="help-breadcrumbs">
-        {% assign a = parent %}
-        {% include 'help_breadcrumb' %}
-        {{ title }}
-      </div>
-    {% endif %}{% endcomment %}
+    
+    {% if parent %}
+      {% include 'includes/help-breadcrumbs' %}
+    {% endif %}
 
-    {% for section in pages %}
-      {% if section.pages %}
-        <div class="help-section">
-          
-          <h2 class="help-section-title" id="help-{{ section.slug }}">
-            <a href="{{ section.url }}">{{ section.title }}</a>
-          </h2>
-
-          <ul class="help-topics">
-            {% for topic in section.pages  %}
-              <li class="help-topic">
-                <a href="{{ topic.url }}" class="help-topic-link">{{ topic.title }}</a>
-              </li>
-            {% endfor %}
-          </ul>
-
-        </div>
-      {% endif %}
-    {% endfor %}
+    {% include 'includes/help-toc' %}
     
     {{ body }}
   </div>
+
+  <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad()</script>
 </body>
 </html>

@@ -1,4 +1,5 @@
 @import 'sass-toolbox'
+@import 'github.css'
 
 *
   +box-sizing(border-box)
@@ -28,17 +29,35 @@ p, ol, ul, table, pre
 code
   background: $bg_grey
   padding: 4px
-  font-size: em($fs_normal - 2)
+  font-size: em($fs_small)
 
 pre
   padding: 10px
   background: $bg_grey
+  overflow: scroll
 
   code
-    font-size: em($fs_normal)
     padding: 0
     margin: 0
     background: none
+
+table
+  line-height: 1.5
+  margin-bottom: 30px
+
+th, td
+  padding: 10px 15px 10px 0
+  margin: 0
+  text-align: left
+  font-size: em($fs_small)
+  border-bottom: 1px solid $border_light_grey
+
+  &:last-child
+    padding-right: 0
+
+tr:last-child
+  th, td
+    border-bottom: 0 none
 
 
 // Help search
@@ -59,6 +78,11 @@ pre
 // ================================================
 .help-breadcrumbs
   margin: 15px 0 $gutter
+  font-size: em($fs_small)
+
+.help-current-breadcrumb
+  color: $text_light
+
 
 // Help table of contents
 // ================================================
@@ -79,7 +103,7 @@ pre
   font-size: em($fs_normal)
   text-transform: uppercase
 
-.help-topics
+.help-topics, .help-subtopics
   margin: 0
   padding: 0
   list-style: none
@@ -92,8 +116,17 @@ pre
   &:last-child
     border-bottom: 0 none
 
-.help-topic-link
-  display: block
+.help-subtopics
+  margin-top: 5px
+
+.help-subtopic
+  font-size: em($fs_small)
+  margin: 2px 0
+
+  &:before
+    content: '-'
+    margin-right: 5px
+    color: $text_light
 
 
 // Help item permalink page
