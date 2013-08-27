@@ -69,13 +69,13 @@ tr:last-child
 // ================================================
 .header-nav
   list-style: none
-  margin: 0 0 ($gutter / 2)
+  margin: 0 0 15px
   padding: 0
 
 .header-nav-item
   display: inline-block
   text-transform: uppercase
-  font-size: em($fs_small)
+  font-size: em(12)
 
   a
     color: $text_light
@@ -98,7 +98,7 @@ tr:last-child
     margin: 50px auto
 
 
-// Help search
+// Search
 // ================================================
 .help-search-form
   margin-bottom: $gutter
@@ -106,10 +106,30 @@ tr:last-child
 .help-search-field
   display: block
   width: 100%
-  border: 1px solid $border_light_grey
+  border: 0 none
+  background: $bg_grey
   border-radius: 3px
   padding: 10px
-  font-size: em($fs_heading)
+  font-size: em($fs_small)
+
+.st-snippet
+  em
+    background: rgba($yellow, 0.3)
+
+body .swiftype-widget
+  .autocomplete
+    +box-shadow(none)
+    border: 1px solid $border_light_grey
+    margin: 5px 0 0
+
+    li:first-child
+      border-top-left-radius: 3px
+      border-top-right-radius: 3px
+
+    li:last-child
+      border-bottom-left-radius: 3px
+      border-bottom-right-radius: 3px
+
 
 
 // Breadcrumbs

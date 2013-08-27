@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{site.title}} | {{title}}</title>
+  <meta property='st:title' content='{{ title }}' />
+
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link rel="stylesheet" type="text/css" href="/styles/css/style.css" />
   {% comment %}<link rel="stylesheet" type="text/css" href="/styles/css/github.css" />{% endcomment %}
@@ -12,15 +14,17 @@
     
 
   <div class="wrap">
-    <ul class="header-nav">
+    <ul class="header-nav" data-swiftype-index="false">
       {% for page in site.pages %}
         <li class="header-nav-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
       {% endfor %}
     </ul>
-
-    <form class="help-search-form">
-      <input type="text" placeholder="Search topics..." class="help-search-field" />
-    </form>
+  
+    {% if site.meta.swiftype %}
+      <form class="help-search-form">
+        <input type="text" placeholder="Search..." class="help-search-field" id="st-search-input" />
+      </form>
+    {% endif %}
     
     <h1 class="page-title">{{ title }}</h1>
     
@@ -39,7 +43,28 @@
     {% endif %}
 
   </div>
+  
+  
+  {% if site.meta.swiftype %}
+    <div id="st-results-container"></div>
+    <script type="text/javascript">
+      var Swiftype = window.Swiftype || {};
+      (function() {
+        Swiftype.key = '{{ site.meta.swiftype }}';
+        Swiftype.inputElement = '#st-search-input';
+        Swiftype.resultContainingElement = '#st-results-container';
+        Swiftype.attachElement = '#st-search-input';
+        Swiftype.renderStyle = "overlay";
 
+        var script = document.createElement('script');
+        script.type = 'text/javascript';
+        script.async = true;
+        script.src = "//swiftype.com/embed.js";
+        var entry = document.getElementsByTagName('script')[0];
+        entry.parentNode.insertBefore(script, entry);
+      }());
+    </script>
+  {% endif %}
   <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad()</script>
 </body>

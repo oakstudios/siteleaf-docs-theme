@@ -61,13 +61,13 @@ tr:last-child th, tr:last-child td {
 
 .header-nav {
   list-style: none;
-  margin: 0 0 25px;
+  margin: 0 0 15px;
   padding: 0; }
 
 .header-nav-item {
   display: inline-block;
   text-transform: uppercase;
-  font-size: 0.875em; }
+  font-size: 0.75em; }
   .header-nav-item a {
     color: #999d9e;
     padding: 10px;
@@ -89,10 +89,29 @@ tr:last-child th, tr:last-child td {
 .help-search-field {
   display: block;
   width: 100%;
-  border: 1px solid #eeeeee;
+  border: 0 none;
+  background: rgba(0, 0, 0, 0.05);
   border-radius: 3px;
   padding: 10px;
-  font-size: 1.5em; }
+  font-size: 0.875em; }
+
+.st-snippet em {
+  background: rgba(255, 153, 63, 0.3); }
+
+body .swiftype-widget .autocomplete {
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  -ms-box-shadow: none;
+  -o-box-shadow: none;
+  box-shadow: none;
+  border: 1px solid #eeeeee;
+  margin: 5px 0 0; }
+  body .swiftype-widget .autocomplete li:first-child {
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px; }
+  body .swiftype-widget .autocomplete li:last-child {
+    border-bottom-left-radius: 3px;
+    border-bottom-right-radius: 3px; }
 
 .help-breadcrumbs {
   margin: 15px 0 50px;
