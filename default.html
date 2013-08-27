@@ -5,10 +5,10 @@
   <meta content="width=device-width, initial-scale=1" name="viewport">
   <title>{{site.title}} | {{title}}</title>
   <meta property='st:title' content='{{ title }}' />
+  <meta name="generator" content="Siteleaf" />
 
   <link rel="alternate" type="application/rss+xml" href="{{site.feed_url}}" />
   <link rel="stylesheet" type="text/css" href="/styles/css/style.css" />
-  {% comment %}<link rel="stylesheet" type="text/css" href="/styles/css/github.css" />{% endcomment %}
 </head>
 <body>
     
@@ -28,44 +28,18 @@
     
     <h1 class="page-title">{{ title }}</h1>
     
-    {% if parent %}
-      {% include 'includes/help-breadcrumbs' %}
-    {% endif %}
-
+    {% include 'includes/help-breadcrumbs' %}
     {% include 'includes/help-toc' %}
     
     <div class="body">
       {{ body }}
     </div>
 
-    {% if posts.size > 0 %}
-      {% include 'includes/help-posts' %}
-    {% endif %}
+    {% include 'includes/help-posts' %}
 
   </div>
   
   
-  {% if site.meta.swiftype %}
-    <div id="st-results-container"></div>
-    <script type="text/javascript">
-      var Swiftype = window.Swiftype || {};
-      (function() {
-        Swiftype.key = '{{ site.meta.swiftype }}';
-        Swiftype.inputElement = '#st-search-input';
-        Swiftype.resultContainingElement = '#st-results-container';
-        Swiftype.attachElement = '#st-search-input';
-        Swiftype.renderStyle = "overlay";
-
-        var script = document.createElement('script');
-        script.type = 'text/javascript';
-        script.async = true;
-        script.src = "//swiftype.com/embed.js";
-        var entry = document.getElementsByTagName('script')[0];
-        entry.parentNode.insertBefore(script, entry);
-      }());
-    </script>
-  {% endif %}
-  <script src="http://yandex.st/highlightjs/7.3/highlight.min.js"></script>
-  <script>hljs.initHighlightingOnLoad()</script>
+  {% include 'includes/help-scripts' %}
 </body>
 </html>

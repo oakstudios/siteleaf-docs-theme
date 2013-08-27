@@ -4,7 +4,7 @@
   Lists the parents of the current page.
 {% endcomment %}
 
-{% if type == 'page' %}
+{% if parent and type == 'page' %}
   <div class="help-breadcrumbs">
     {% assign slugs = url | split:'/' %}
     {% for slug in slugs %}

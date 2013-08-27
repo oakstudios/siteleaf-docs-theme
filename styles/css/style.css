@@ -28,13 +28,13 @@ p, ol, ul, table, pre {
   margin: 0 0 30px; }
 
 code {
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(235, 240, 242, 0.8);
   padding: 4px;
   font-size: 0.875em; }
 
 pre {
   padding: 10px;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(235, 240, 242, 0.8);
   overflow: scroll; }
   pre code {
     padding: 0;
@@ -83,6 +83,9 @@ tr:last-child th, tr:last-child td {
     .wrap {
       margin: 50px auto; } }
 
+img, embed, object, video, audio {
+  max-width: 100%; }
+
 .help-search-form {
   margin-bottom: 50px; }
 
@@ -90,7 +93,7 @@ tr:last-child th, tr:last-child td {
   display: block;
   width: 100%;
   border: 0 none;
-  background: rgba(0, 0, 0, 0.05);
+  background: rgba(235, 240, 242, 0.8);
   border-radius: 3px;
   padding: 10px;
   font-size: 0.875em; }
@@ -114,7 +117,7 @@ body .swiftype-widget .autocomplete {
     border-bottom-right-radius: 3px; }
 
 .help-breadcrumbs {
-  margin: 15px 0 50px;
+  margin: -15px 0 50px;
   font-size: 0.875em; }
 
 .help-current-breadcrumb {
