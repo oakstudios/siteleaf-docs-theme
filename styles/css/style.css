@@ -59,6 +59,10 @@ tr:last-child th, tr:last-child td {
 .body {
   line-height: 1.5; }
 
+.siteleaf-credit {
+  font-size: 0.875em;
+  color: #999d9e; }
+
 .header-nav {
   list-style: none;
   margin: 0 0 15px;

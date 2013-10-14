@@ -11,7 +11,7 @@
   <link rel="stylesheet" type="text/css" href="/styles/css/style.css?v=1" />
 </head>
 <body>
-    
+
 
   <div class="wrap">
     <ul class="header-nav" data-swiftype-index="false">
@@ -19,27 +19,27 @@
         <li class="header-nav-item"><a href="{{ page.url }}">{{ page.title }}</a></li>
       {% endfor %}
     </ul>
-  
+
     {% if site.meta.swiftype %}
       <form class="help-search-form">
         <input type="text" placeholder="Search..." class="help-search-field" id="st-search-input" />
       </form>
     {% endif %}
-    
+
     <h1 class="page-title">{{ title }}</h1>
-    
+
     {% include 'includes/help-breadcrumbs' %}
     {% include 'includes/help-toc' %}
-    
+
     <div class="body">
       {{ body }}
     </div>
 
     {% include 'includes/help-posts' %}
 
+    <p class="siteleaf-credit">Powered by <a href="http://www.siteleaf.com" target="_blank">Siteleaf</a></p>
   </div>
-  
-  
+
   {% include 'includes/help-scripts' %}
 </body>
 </html>
